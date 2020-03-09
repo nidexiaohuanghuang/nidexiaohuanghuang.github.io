@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>我的图库</title>
+      <link href="/nidexiaohuanghuang/2020/03/05/photo/"/>
+      <url>/nidexiaohuanghuang/2020/03/05/photo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="3月6日"><a href="#3月6日" class="headerlink" title="3月6日"></a>3月6日</h1><div class="justified-gallery"><p><a href="http://gaoxiao.jokeji.cn/UpFilesnew/2013/7/27/2013727212427509.jpg" data-fancybox="group" data-caption class="fancybox"><img src="http://gaoxiao.jokeji.cn/UpFilesnew/2013/7/27/2013727212427509.jpg" alt title></a><br><a href="http://k2.jsqq.net/uploads/allimg/1703/7_170317150023_13.jpg" data-fancybox="group" data-caption class="fancybox"><img src="http://k2.jsqq.net/uploads/allimg/1703/7_170317150023_13.jpg" alt title></a><br><a href="http://k2.jsqq.net/uploads/allimg/1703/7_170317150023_11.jpg" data-fancybox="group" data-caption class="fancybox"><img src="http://k2.jsqq.net/uploads/allimg/1703/7_170317150023_11.jpg" alt title></a><br><a href="https://cn.bing.com/th?id=OIP.6babBUCwEJsEXZFOXS_yXgAAAA&pid=Api&rs=1" data-fancybox="group" data-caption class="fancybox"><img src="https://cn.bing.com/th?id=OIP.6babBUCwEJsEXZFOXS_yXgAAAA&pid=Api&rs=1" alt title></a></p>          </div>]]></content>
+      
+      
+      <categories>
+          
+          <category> photo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> photo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/nidexiaohuanghuang/2020/03/04/hello-world/"/>
+      <url>/nidexiaohuanghuang/2020/03/04/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></div><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div><div class="justified-gallery"><p><a href="https://gratisography.com/wp-content/uploads/2019/10/gratisography-scary-pumpkin-hand-900x600.jpg" data-fancybox="group" data-caption class="fancybox"><img src="https://gratisography.com/wp-content/uploads/2019/10/gratisography-scary-pumpkin-hand-900x600.jpg" alt title></a><br><a href="https://picjumbo.com/wp-content/uploads/iphone-free-stock-photos-2210x3315.jpg" data-fancybox="group" data-caption class="fancybox"><img src="https://picjumbo.com/wp-content/uploads/iphone-free-stock-photos-2210x3315.jpg" alt title></a><br><a href="https://picjumbo.com/wp-content/uploads/iphone-free-stock-photos-2210x3315.jpg" data-fancybox="group" data-caption class="fancybox"><img src="https://picjumbo.com/wp-content/uploads/iphone-free-stock-photos-2210x3315.jpg" alt title></a> </p>          </div><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Demo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> woyebuzhidao </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
