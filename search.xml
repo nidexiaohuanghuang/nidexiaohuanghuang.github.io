@@ -79,23 +79,48 @@
     
     
     <entry>
-      <title>我的图库</title>
-      <link href="/2020/03/05/photo/"/>
-      <url>/2020/03/05/photo/</url>
+      <title>react</title>
+      <link href="/2020/03/09/reactvue/"/>
+      <url>/2020/03/09/reactvue/</url>
       
-        <content type="html"><![CDATA[<h1 id="3月6日"><a href="#3月6日" class="headerlink" title="3月6日"></a>3月6日</h1><div class="justified-gallery"><p><div><img src="http://gaoxiao.jokeji.cn/UpFilesnew/2013/7/27/2013727212427509.jpg" alt></div><br><div><img src="http://k2.jsqq.net/uploads/allimg/1703/7_170317150023_13.jpg" alt></div><br><div><img src="http://k2.jsqq.net/uploads/allimg/1703/7_170317150023_11.jpg" alt></div><br><div><img src="https://cn.bing.com/th?id=OIP.6babBUCwEJsEXZFOXS_yXgAAAA&pid=Api&rs=1" alt></div><br><div><img src="http://k2.jsqq.net/uploads/allimg/1703/7_170317150023_13.jpg" alt></div></p>          </div>]]></content>
+        <content type="html"><![CDATA[<h1 id="JSX文件类型：融合了js与html两种语言"><a href="#JSX文件类型：融合了js与html两种语言" class="headerlink" title="JSX文件类型：融合了js与html两种语言"></a>JSX文件类型：融合了js与html两种语言</h1><ol><li>html段中颗包含js语法</li><li>在js中处理html段<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGreeting</span>(<span class="params">user</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (user) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;formatName(user)&#125;!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, Stranger.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 闭合式标签需要在结尾加/</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#123;user.avatarUrl&#125;</span> /&gt;</span></span>;</span><br></pre></td></tr></table></figure></div></li></ol><h1 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><ol><li>传入ReactDom.render方法进行渲染</li></ol><ul><li>react元素在创建后是不可变的，更新的唯一方法是创建新元素，然后传入ReactDom.render</li></ul><h1 id="组件与依赖"><a href="#组件与依赖" class="headerlink" title="组件与依赖"></a>组件与依赖</h1><p>props属性可读、可用、不可修改(单向数据流)</p><ul><li>渲染方法<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello,&#123;props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">Welcome</span> <span class="attr">name</span>=<span class="string">'world'</span> /&gt;</span></span></span><br><span class="line">ReactDom.render(</span><br><span class="line">element,<span class="built_in">document</span>.getElementById(<span class="string">'root'</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></div></li><li>多次渲染<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;Welcome name=<span class="string">"Sara"</span> /&gt;</span><br><span class="line">      &lt;Welcome name=<span class="string">"Cahal"</span> /&gt;</span><br><span class="line">      &lt;Welcome name=<span class="string">"Edite"</span> /&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">ReactDOM.render(</span></span><br><span class="line"><span class="regexp">  &lt;App /</span>&gt;,</span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></div></li><li>对组件进行提取，细化，提高可复用性</li><li>利用组件状态优化</li><li>组件状态和生命周期<br>状态（state）：组件的私有属性，是局部的，完全受控于当前组件；<br>属性（JSX属性）：属性是被传入的，只可读不可修改的；<br>生命周期：在重新渲染组件前，释放组件所占用的资源（DOM、计时器、eventListener）<br>函数组件 ==&gt; 类 ：使组件拥有状态，拥有生命周期</li></ul><h1 id="关于setState"><a href="#关于setState" class="headerlink" title="关于setState"></a>关于setState</h1><ol><li>通过对象属性更新，并不会重新渲染</li><li>状态更新可能是异步的</li><li>状态合并更新</li></ol><h1 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h1><ol><li>事件命名：驼峰命名法</li><li>jsx语法：<br>传入函数作为事件处理函数，如：onclick={activate}；<br>而不是字符串形式，如onclick=”activateLasers()”</li><li>类的监听事件默认不会绑定this，因此添加事件绑定时<br>方法1：需要手动bind(this)<br>例如：this.handleClick = this.handleClick.bind(this);<br>方法2：使用箭头函数<br>例如：<br>handleClick = () =&gt; {<br> console.log(‘this is:’, this);<br>}</li></ol><h1 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h1><ol><li>if：判断分支渲染<br>&amp;&amp; : true &amp;&amp; expression 总是返回 expression，而 false &amp;&amp; expression 总是返回 false。</li><li>阻止组件渲染： render() { return null } 但不影响生命周期</li></ol><h1 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a>列表渲染</h1><p>创建基础列表组件   只需传入列表数组，即可自动生成<br>使用li标签必须添加一个key值，主要用于在li的一系列标签中唯一标识该元素，用于后续的删除、修改操作。key的作用域是同级节点之间<br>当数组元素没有确定的id用于标识，可以用index替代</p><h1 id="状态提升"><a href="#状态提升" class="headerlink" title="状态提升"></a>状态提升</h1><p>目的：用于父组件中使用多个子组件，则将子组件之间的共享状态提升到父组件中进行管理<br>问题：子组件之间的共享状态state保存到父组件中，子组件通过props读取，但是不能修改；<br>解决途径：为了使子组件能够修改提升后的共享状态，将父组件的方法作为props属性值传入子组件来实现；子组件借用父组件的方法来修改父组件的state，“虽然很麻烦，但是有助于查找bug”</p>]]></content>
       
       
       <categories>
           
-          <category> photo </category>
+          <category> react </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> photo </tag>
+            <tag> react </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>杂记</title>
+      <link href="/2020/03/05/photo/"/>
+      <url>/2020/03/05/photo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="3月6日"><a href="#3月6日" class="headerlink" title="3月6日"></a>3月6日</h1><p>只为让你开心一笑</p><div class="justified-gallery"><p><div><img src="http://gaoxiao.jokeji.cn/UpFilesnew/2013/7/27/2013727212427509.jpg" alt></div><br><div><img src="http://k2.jsqq.net/uploads/allimg/1703/7_170317150023_13.jpg" alt></div><br><div><img src="http://k2.jsqq.net/uploads/allimg/1703/7_170317150023_11.jpg" alt></div><br><div><img src="https://cn.bing.com/th?id=OIP.6babBUCwEJsEXZFOXS_yXgAAAA&pid=Api&rs=1" alt></div><br><div><img src="http://k2.jsqq.net/uploads/allimg/1703/7_170317150023_13.jpg" alt></div></p>          </div><h1 id="3月26日"><a href="#3月26日" class="headerlink" title="3月26日"></a>3月26日</h1><p>你看到的可能只是眼前的三颗目标球，只有纵观全局比别人想的多考虑的多一些才能取得最后的辉煌——————致热爱的台球艺术</p><div class="justified-gallery"><p><div><img src="http://m.qpic.cn/psc?/V12pxWy70REVnb/z4wcfyXMQjQ.Ifdxv6x54n07h3gKY5kGrRUlRvvZzmA8mMGHcTKobp7WZbMUGg6hxN3H*iDi1hfLH3gtWRAl4A!!/b&bo=rgPsAwAAAAARB3I!&rf=viewer_4" alt></div> </p>          </div><h1 id="3月28日"><a href="#3月28日" class="headerlink" title="3月28日"></a>3月28日</h1><h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><ol><li>金禅降魔 (2020) 预计2020年5月8日上映</li><li>摸金校尉之九幽将军</li><li>师傅</li><li>萨霍  ———————— 推荐要看</li><li>诺曼达人——————  真人剧集</li><li>假装情侣—————— 黄渤</li><li>阿尔法：狼伴归途</li><li>小丑</li><li>海上钢琴师</li><li></li></ol><h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2><ol><li>最美的伤口</li><li>迷人的危险</li><li>口是心非</li><li>少年</li><li>樱花树下的约定</li><li>嚣张</li><li>惊雷</li><li>一生回味一面</li><li>无味</li><li>十年人间</li><li>又这样熬过一夜</li><li>慢半拍</li></ol><h2 id="照片效果"><a href="#照片效果" class="headerlink" title="照片效果"></a>照片效果</h2><ol><li>星空<br>分辨率RAW<br>lso感光度1600<br>s快门速度30<br>wB色温3800  </li><li>XXX</li></ol><h2 id="这句话有用吗？？？？"><a href="#这句话有用吗？？？？" class="headerlink" title="这句话有用吗？？？？"></a>这句话有用吗？？？？</h2><ul><li>一路坎坷，势必嫉恶如仇</li><li>蛟龙未遇，潜身于鱼虾之间;君子未时，拱手于小人之下</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> daily </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> daily </tag>
             
         </tags>
       
